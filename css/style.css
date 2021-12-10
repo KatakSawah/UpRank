@@ -1,0 +1,51 @@
+img {
+	object-fit: cover;
+}
+
+.tes{
+	border: 1px solid red;
+}
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar-toggler {
+	border: none;
+}
+
+.logotype {
+	height: 40px;
+}
+
+#product .img-thumbnail {
+	height: 180px;
+	width: 100%;
+}
+
+@media (min-width: 1200px) {
+	.responsive {
+	  width: 100%;
+	  height: auto;
+	  height: 100vh;
+	}
+
+	.section-main-img {
+		height: 410px;
+	}
+
+	.zoom {
+		transition: transform .2s;
+	}
+
+	.zoom:hover {
+		transform: scale(1.1);
+	}
+
+	#about #logoType{
+		height: 410px;
+	}
+}
