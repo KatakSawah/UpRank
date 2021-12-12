@@ -2,6 +2,11 @@ img {
 	object-fit: cover;
 }
 
+/*input[type="text"]:focus, textarea:focus  {
+    outline: none !important;
+    border-color: #212529;
+}*/
+
 .tes{
 	border: 1px solid red;
 }
@@ -10,7 +15,7 @@ img {
   overflow: hidden;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .navbar-toggler {
@@ -29,6 +34,59 @@ img {
 .social-media-icon {
 	position: absolute;
 	bottom: 16px;
+}
+
+/*Floating Label and inputs*/
+form{
+  max-width:768px;
+  border:1px solid #ddd;
+  padding:3vw;
+  display:flex;
+  flex-direction:column;
+  border-radius:5px;
+}
+
+label {
+	position: absolute;
+	width: 100%;
+  margin-bottom:15px;
+  position:relative;
+  border-bottom:1px solid #ddd;
+}
+
+input, textarea {
+  width:100%;
+  padding:10px 0px;
+  margin-top:20px;
+  border:none;
+  outline:none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity:0;
+}
+
+.floating-label {
+  position:absolute;
+  top:0;
+  left:0;
+  transform:translateY(30px);
+  font-size:0.825em;
+  transition-duration:300ms;
+}
+
+label:focus-within > span,
+input:not(:placeholder-shown) + span, 
+textarea:not(:placeholder-shown) + span{
+  color:purple;
+  transform:translateY(0px);
+}
+
+@media (max-width: 767.98px) {
+	a[type="button"] {
+		width: 100%;
+	}
 }
 
 @media (min-width: 1200px) {
