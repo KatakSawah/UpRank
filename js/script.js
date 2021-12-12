@@ -18,15 +18,12 @@ function start_am() {
     });
 }
 
-function changeBgColor() {
-    var url = window.location.href;
-
-    console.log(url);
-
-    if (!url.includes("#product") || !url.includes("#about") || !url.includes("#event") || !url.includes("#contact")) {
+function changeBgColor(bar) {
+    if(bar != "home"){
         document.getElementById("navbar-example").classList.add('bg-dark');
         document.getElementById("navbar-example").classList.remove('bg-transparent');
-    } else {
+    }
+    else{
         document.getElementById("navbar-example").classList.add('bg-transparent');
         document.getElementById("navbar-example").classList.remove('bg-dark');
     }
