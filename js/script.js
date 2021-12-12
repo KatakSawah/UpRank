@@ -1,3 +1,5 @@
+new WOW().init();
+
 function start_am() {
     const sect = document.querySelectorAll('.sec_animate');
 
