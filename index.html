@@ -12,13 +12,14 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>
     <!-- title -->
     <link rel="shortcut icon" href="img/favicon.ico">
-    <title> Vesicoke</title>
+    <title>Vesicoke</title>
   </head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#navbar-example" onload="start_am()">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-tranparent py-2 fw-bold" id="navbar-example">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="img/Vesicoke Logotype.png" alt="Vesicoke" height="40">
@@ -27,21 +28,21 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#product">Product</a>
+            <a class="nav-link" href="#product" onclick="changeBgColor()">Product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#about" onclick="changeBgColor()">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#event">Event</a>
+            <a class="nav-link" href="#event" onclick="changeBgColor()">Event</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="#contact" onclick="changeBgColor()">Contact</a>
           </li>
         </ul>
       </div>
@@ -49,7 +50,7 @@
   </nav>
 
   <!-- home -->
-  <section id="home">
+  <section id="home" class="sec_animate">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -170,81 +171,6 @@
       </div>
     </div>
   </section>
-  
-  <!-- keep in touch -->
-  <!-- <section id="socialPage" class="py-lg-5">
-    <div class="container py-lg-5 px-lg-4">
-      <div class="row mb-lg-3">
-        <h1 class="text-center fw-bold">
-          OFFICIAL SOCIAL PAGE
-        </h1>
-      </div>
-      <div class="row my-lg-4">
-        <div class="col-3 p-0">
-          <a href="#" class="card rounded-0 border-0 rounded-start text-white">
-            <img src="img/cola 3.jpg" class="card-img" alt="...">
-            <div class="card-img-overlay bg-dark bg-opacity-25">
-              <span class="social-media-icon">
-                <span class="">
-                  &nbsp;
-                </span>
-                <i class="fab fa-instagram" style="font-size: 36px;"></i>
-              </span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-3 p-0">
-          <a href="#" class="card rounded-0 border-0 text-white">
-            <img src="img/cola 3.jpg" class="card-img" alt="...">
-            <div class="card-img-overlay bg-dark bg-opacity-25">
-              <span class="social-media-icon">
-                <span class="">
-                  &nbsp;
-                </span>
-                <i class="fab fa-facebook" style="font-size: 36px;"></i>
-              </span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-3 p-0">
-          <a href="#" class="card rounded-0 border-0 text-white">
-            <img src="img/cola 3.jpg" class="card-img" alt="...">
-            <div class="card-img-overlay bg-dark bg-opacity-25">
-              <span class="social-media-icon">
-                <span class="">
-                  &nbsp;
-                </span>
-                <i class="fab fa-youtube" style='font-size:36px'></i>
-              </span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-3 p-0">
-          <a href="#" class="card rounded-0 border-0 rounded-end text-white">
-            <img src="img/cola 3.jpg" class="card-img" alt="...">
-            <div class="card-img-overlay bg-dark bg-opacity-25">
-              <span class="social-media-icon">
-                <span class="">
-                  &nbsp;
-                </span>
-                <i class="fab fa-twitter" style='font-size:36px'></i>
-              </span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="row my-lg-4">
-        <div class="col-12 px-0">
-          <a href="#contact" type="button" class="btn btn-outline-dark btn-lg rounded px-4 fw-bold border-3 w-100">
-            See Our Contact List Below  
-          </a>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
   <!-- contact -->
   <section id="contact" class="py-5">
@@ -256,8 +182,8 @@
       </div>
       <div class="row">
         
-        <div class="col-lg-7 px-lg-4 tes">
-          <form class="row my-lg-3 tes g-3">
+        <div class="col-lg-8 px-lg-4 tes">
+          <form class="row my-lg-0 tes g-3">
 
             <div class="row">
               <div class="col-md-6">
@@ -268,7 +194,7 @@
               </div>
 
               <div class="col-md-6">
-                <label for="email">
+                <label for="email" class="tes">
                   <input type="text" id="lName" placeholder="Email">
                   <span class="floating-label">Last Name</span>
                 </label>
@@ -279,83 +205,71 @@
               <div class="col-md-6">
                 <label for="name">
                   <input type="text" id="fName" placeholder="Name">
-                  <span class="floating-label">First Name</span>
+                  <span class="floating-label">Mail</span>
                 </label>
               </div>
 
               <div class="col-md-6">
                 <label for="email">
                   <input type="text" id="lName" placeholder="Email">
-                  <span class="floating-label">Last Name</span>
+                  <span class="floating-label">Phone</span>
                 </label>
               </div>
             </div>
 
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <label for="name">
                   <textarea type="text" id="fName" placeholder="Name"></textarea>
                   <span class="floating-label">First Name</span>
                 </label>
               </div>
+              <div class="col-md-12">
+                <a href="#sent" type="button" class="btn btn-outline-dark btn-lg rounded px-4 fw-bold border-3 w-100">
+                  Send Message
+                </a>
+              </div>
             </div>
-            
             
             <!-- <button type="button">Register</button> -->
           </form>
         </div>
-
-        <!-- <div class="col-lg-7 px-lg-4 tes">
-          <form class="row my-lg-3 tes g-3">
-            <div class="form-floating col-md-6">
-              <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="First Name">
-              <label class="px-md-3">First Name</label>
-            </div>
-
-            <div class="form-floating col-md-6">
-              <input type="text" class="form-control" id="floatingInput" placeholder="Last Name">
-              <label class="px-md-3">Last Name</label>
-            </div>
-
-            <div class="form-floating col-md-6">
-              <input type="text" class="form-control" id="floatingInput" placeholder="example@gmail.com">
-              <label class="px-md-3">E-mail</label>
-            </div>
-
-            <div class="form-floating col-md-6">
-              <input type="text" class="form-control" id="floatingInput" placeholder="815853921">
-              <label class="px-md-3">Phone</label>
-            </div>
-
-            <div class="form-floating col-md-12">
-              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-              <label for="floatingTextarea2" class="px-md-3">Message</label>
-            </div>
-
-            <a href="#contact" type="button" class="btn btn-outline-dark btn-lg rounded fw-bold border-3 w-100">
-              Send
-            </a>
-          </form>
-        </div> -->
-        <div class="col-lg-5 px-4 tes">
+        <div class="col-lg-4 px-4 tes">
           <h1 class="fw-bold mt-4">
             Contact Information
           </h1>
-          <p class="mb-5">
+          <p>
             Fill up the form and the team will get back to you wihin 2 days.
           </p>
 
-          <p>
-            +62 815-8539-321
-          </p>
+          <div class="my-5">
+            <p>
+              +62 815-8539-321
+            </p>
 
-          <p>
-            vesicoke01@gmail.com
-          </p>
+            <p>
+              vesicoke01@gmail.com
+            </p>
 
-          <p>
-            Somewhere in Borneo
-          </p>
+            <p>
+              Somewhere in Borneo
+            </p>
+          </div>
+          <div class="row tes">
+            <div class="col-2 py-2 tes text-center">
+              <i class="fab fa-instagram" style="font-size: 18px;"></i>
+            </div>
+            <div class="col-2 py-2 tes text-center">
+              <i class="fab fa-facebook" style="font-size: 18px;"></i>
+            </div>
+            <div class="col-2 py-2 tes text-center">
+              <i class="fab fa-youtube" style="font-size: 18px;"></i>
+            </div>
+            <div class="col-2 py-2 tes text-center">
+              <i class="fab fa-twitter" style="font-size: 28px;"></i>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
