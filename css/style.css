@@ -27,11 +27,6 @@ img, video {
 	width: 100%;
 }
 
-.social-media-icon {
-	position: absolute;
-	bottom: 16px;
-}
-
 /*Floating Label and inputs*/
 form{
   max-width:768px;
@@ -93,29 +88,32 @@ textarea:not(:placeholder-shown) + span{
   transform:translateY(0px);
 }
 
-.socials a {
-	color: #212529;
+/*socials*/
+
+.socials a:nth-child(1) {
+  color: #3b5998
 }
 
-.socials a:hover {
-	cursor: pointer;
-	transition: color 1s;
+.socials a:nth-child(2) {
+  color: #4267B2;
 }
 
-.socials .fa-instagram-square:hover {
-	color: #CA307B;
+.socials a:nth-child(3) {
+  color: #BA2E29;
 }
 
-.socials .fa-facebook:hover {
-	color: #385490;
+.socials a:nth-child(4) {
+  color: #1C99E6;
 }
 
-.socials .fa-youtube:hover {
-	color: #FF0000;
-}
-
-.socials .fa-twitter:hover {
-	color: #5DA9DD;
+.fa-instagram-square {
+  color: transparent;
+  background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 @media (max-width: 991.98px) {
@@ -133,14 +131,13 @@ textarea:not(:placeholder-shown) + span{
 
 	.section-main-img {
 		height: 410px;
+		box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.5);
+	  transition: all ease-in-out 150ms;
 	}
 
-	.zoom {
-		transition: transform .2s;
-	}
-
-	.zoom:hover {
-		transform: scale(1.1);
+	.section-main-img:hover {
+	  margin-top: -3px;
+	  box-shadow: 13px 14px 12px rgba(0, 0, 0, 0.4);
 	}
 
 	#about #logoType{
@@ -155,6 +152,16 @@ textarea:not(:placeholder-shown) + span{
   	position: absolute;
   	bottom: 8.5%;
   }
+
+  .socials i {
+	  text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+	  transition: all ease-in-out 150ms;
+	}
+
+	.socials i:hover {
+	  margin-top: -3px;
+	  text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
+	}
 
   .socials i {
   	padding: 6px;
