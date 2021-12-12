@@ -19,21 +19,15 @@ function start_am() {
 }
 
 function changeBgColor() {
-    var uri = window.location.href;
-    
-    uri = uri.split('#');
-    if(Array.isArray(uri)){
-        if(uri[1] != "home"){
-            document.getElementById("navbar-example").classList.remove('bg-dark');
-            document.getElementById("navbar-example").classList.add('bg-transparent');
-        }
-        else{
-            document.getElementById("navbar-example").classList.add('bg-dark');
-            document.getElementById("navbar-example").classList.remove('bg-transparent');
-        }
-    }
-    else{
+    var url = window.location.href;
+
+    console.log(url);
+
+    if (!url.includes("#product") || !url.includes("#about") || !url.includes("#event") || !url.includes("#contact")) {
         document.getElementById("navbar-example").classList.add('bg-dark');
         document.getElementById("navbar-example").classList.remove('bg-transparent');
+    } else {
+        document.getElementById("navbar-example").classList.add('bg-transparent');
+        document.getElementById("navbar-example").classList.remove('bg-dark');
     }
 }
