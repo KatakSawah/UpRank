@@ -1,11 +1,6 @@
-img {
+img, video {
 	object-fit: cover;
 }
-
-/*input[type="text"]:focus, textarea:focus  {
-    outline: none !important;
-    border-color: #212529;
-}*/
 
 .tes{
 	border: 1px solid red;
@@ -56,6 +51,7 @@ label {
 }
 
 input {
+	color: #6C757D;
   width:100%;
   padding:10px 0px;
   margin-top:20px;
@@ -64,6 +60,7 @@ input {
 }
 
 textarea {
+	color: #6C757D;
   width: 100%;
   height: 120px;
   padding: 12px 0px;
@@ -91,8 +88,34 @@ textarea::placeholder {
 label:focus-within > span,
 input:not(:placeholder-shown) + span, 
 textarea:not(:placeholder-shown) + span{
-  color:purple;
+  color: #212529;
+  border-color: #212529;
   transform:translateY(0px);
+}
+
+.socials a {
+	color: #212529;
+}
+
+.socials a:hover {
+	cursor: pointer;
+	transition: color 1s;
+}
+
+.socials .fa-instagram-square:hover {
+	color: #CA307B;
+}
+
+.socials .fa-facebook:hover {
+	color: #385490;
+}
+
+.socials .fa-youtube:hover {
+	color: #FF0000;
+}
+
+.socials .fa-twitter:hover {
+	color: #5DA9DD;
 }
 
 @media (max-width: 991.98px) {
@@ -126,5 +149,14 @@ textarea:not(:placeholder-shown) + span{
 
 	.card-img {
     height: 275px;
+  }
+
+  .socials {
+  	position: absolute;
+  	bottom: 8.5%;
+  }
+
+  .socials i {
+  	padding: 6px;
   }
 }
