@@ -120,6 +120,12 @@ textarea:not(:placeholder-shown) + span{
 	a[type="button"] {
 		width: 100%;
 	}
+
+	.responsive {
+	  width: 100%;
+	  height: auto;
+	  height: 200px;
+	}
 }
 
 @media (min-width: 1200px) {
